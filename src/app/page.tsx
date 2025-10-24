@@ -115,7 +115,7 @@ ${formData.message}`
             <div className="flex items-center">
               <div className="flex-shrink-0 flex items-center space-x-3">
                 <img
-                  src="/logo.png"
+                  src="/pcmedicalsolutions.png"
                   alt="PC Medical Solutions Logo"
                   className="h-8 w-8 object-contain"
                 />
@@ -611,7 +611,7 @@ ${formData.message}`
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <img
-                  src="/logo.png"
+                  src="/pcmedicalsolutions.png"
                   alt="PC Medical Solutions Logo"
                   className="h-8 w-8 object-contain"
                 />

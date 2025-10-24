@@ -14,24 +14,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Z.ai Code Scaffold - AI-Powered Development",
-  description: "Modern Next.js scaffold optimized for AI-powered development with Z.ai. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "Z.ai Team" }],
+  title: "PC Medical Solutions - Advanced Recovery Solutions",
+  description: "Professional cold therapy, compression therapy, electrotherapy, and orthopedic bracing solutions for faster recovery and pain relief. Trusted by physicians and patients nationwide.",
+  keywords: ["medical equipment", "cold therapy", "compression therapy", "electrotherapy", "orthopedic bracing", "pain relief", "post-surgery recovery", "injury recovery"],
+  authors: [{ name: "PC Medical Solutions" }],
   icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
+    icon: "/pcmedicalsolutions.png",
   },
   openGraph: {
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
-    url: "https://chat.z.ai",
-    siteName: "Z.ai",
+    title: "PC Medical Solutions - Advanced Recovery Solutions",
+    description: "Professional medical solutions for faster recovery and pain relief",
+    siteName: "PC Medical Solutions",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
+    title: "PC Medical Solutions - Advanced Recovery Solutions",
+    description: "Professional medical solutions for faster recovery and pain relief",
   },
 };
 
