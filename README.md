@@ -1,60 +1,40 @@
-# 🚀 Welcome to Z.ai Code Scaffold
+# PC Medical Solutions
 
-A modern, production-ready web application scaffold powered by cutting-edge technologies, designed to accelerate your development with [Z.ai](https://chat.z.ai)'s AI-powered coding assistance.
+Professional medical equipment and recovery solutions website providing advanced cold therapy, compression therapy, electrotherapy, and orthopedic bracing for faster recovery and pain relief.
 
-## ✨ Technology Stack
+## About
 
-This scaffold provides a robust foundation built with:
+PC Medical Solutions specializes in providing physician-trusted medical equipment for post-surgical and injury recovery. Our website showcases our services, product training videos, and provides an easy way for patients to schedule consultations.
 
-### 🎯 Core Framework
-- **⚡ Next.js 15** - The React framework for production with App Router
-- **📘 TypeScript 5** - Type-safe JavaScript for better developer experience
-- **🎨 Tailwind CSS 4** - Utility-first CSS framework for rapid UI development
+## Features
 
-### 🧩 UI Components & Styling
-- **🧩 shadcn/ui** - High-quality, accessible components built on Radix UI
-- **🎯 Lucide React** - Beautiful & consistent icon library
-- **🌈 Framer Motion** - Production-ready motion library for React
-- **🎨 Next Themes** - Perfect dark mode in 2 lines of code
+- **Service Showcase** - Detailed information about cold therapy, compression therapy, electrotherapy, and orthopedic bracing
+- **Product Training Videos** - Step-by-step instructional videos for using our medical equipment
+- **Contact & Consultation** - Easy-to-use contact form for scheduling consultations
+- **Responsive Design** - Mobile-first design that works seamlessly on all devices
+- **Smooth Animations** - Professional animations and transitions for enhanced user experience
 
-### 📋 Forms & Validation
-- **🎣 React Hook Form** - Performant forms with easy validation
-- **✅ Zod** - TypeScript-first schema validation
+## Technology Stack
 
-### 🔄 State Management & Data Fetching
-- **🐻 Zustand** - Simple, scalable state management
-- **🔄 TanStack Query** - Powerful data synchronization for React
-- **🌐 Axios** - Promise-based HTTP client
+Built with modern web technologies for optimal performance and user experience:
 
-### 🗄️ Database & Backend
-- **🗄️ Prisma** - Next-generation Node.js and TypeScript ORM
-- **🔐 NextAuth.js** - Complete open-source authentication solution
+### Core Framework
+- **Next.js 15** - React framework with App Router for optimal performance
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first CSS framework
 
-### 🎨 Advanced UI Features
-- **📊 TanStack Table** - Headless UI for building tables and datagrids
-- **🖱️ DND Kit** - Modern drag and drop toolkit for React
-- **📊 Recharts** - Redefined chart library built with React and D3
-- **🖼️ Sharp** - High performance image processing
+### UI Components & Features
+- **shadcn/ui** - High-quality, accessible components
+- **Framer Motion** - Smooth animations and transitions
+- **Lucide React** - Beautiful icon library
 
-### 🌍 Internationalization & Utilities
-- **🌍 Next Intl** - Internationalization library for Next.js
-- **📅 Date-fns** - Modern JavaScript date utility library
-- **🪝 ReactUse** - Collection of essential React hooks for modern development
+### Form Handling
+- **React Hook Form** - Performant form validation
+- **Mailto integration** - Direct email consultation requests
 
-## 🎯 Why This Scaffold?
+## Getting Started
 
-- **🏎️ Fast Development** - Pre-configured tooling and best practices
-- **🎨 Beautiful UI** - Complete shadcn/ui component library with advanced interactions
-- **🔒 Type Safety** - Full TypeScript configuration with Zod validation
-- **📱 Responsive** - Mobile-first design principles with smooth animations
-- **🗄️ Database Ready** - Prisma ORM configured for rapid backend development
-- **🔐 Auth Included** - NextAuth.js for secure authentication flows
-- **📊 Data Visualization** - Charts, tables, and drag-and-drop functionality
-- **🌍 i18n Ready** - Multi-language support with Next Intl
-- **🚀 Production Ready** - Optimized build and deployment settings
-- **🤖 AI-Friendly** - Structured codebase perfect for AI assistance
-
-## 🚀 Quick Start
+### Development
 
 ```bash
 # Install dependencies
@@ -70,72 +50,54 @@ npm run build
 npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see your application running.
+Open [http://localhost:3000](http://localhost:3000) to see the website.
 
-## 🤖 Powered by Z.ai
+### Deployment
 
-This scaffold is optimized for use with [Z.ai](https://chat.z.ai) - your AI assistant for:
+This project is configured for deployment on Vercel:
 
-- **💻 Code Generation** - Generate components, pages, and features instantly
-- **🎨 UI Development** - Create beautiful interfaces with AI assistance  
-- **🔧 Bug Fixing** - Identify and resolve issues with intelligent suggestions
-- **📝 Documentation** - Auto-generate comprehensive documentation
-- **🚀 Optimization** - Performance improvements and best practices
+```bash
+# Deploy to production
+vercel --prod
+```
 
-Ready to build something amazing? Start chatting with Z.ai at [chat.z.ai](https://chat.z.ai) and experience the future of AI-powered development!
-
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
-├── app/                 # Next.js App Router pages
-├── components/          # Reusable React components
-│   └── ui/             # shadcn/ui components
-├── hooks/              # Custom React hooks
-└── lib/                # Utility functions and configurations
+├── app/
+│   ├── layout.tsx          # Root layout with metadata
+│   ├── page.tsx            # Main homepage component
+│   └── globals.css         # Global styles
+├── components/
+│   └── ui/                 # Reusable UI components
+├── hooks/                  # Custom React hooks
+└── lib/                    # Utility functions
+
+public/
+└── pcmedicalsolutions.png  # Company logo
 ```
 
-## 🎨 Available Features & Components
+## Key Sections
 
-This scaffold includes a comprehensive set of modern web development tools:
+- **Hero Section** - Compelling introduction to our recovery solutions
+- **Services** - Four main service categories with detailed descriptions
+- **Product Training Videos** - Embedded Vimeo tutorials for equipment usage
+- **Benefits** - Why patients and physicians trust PC Medical Solutions
+- **About Us** - Company values and expertise
+- **Contact** - Multiple ways to get in touch and schedule consultations
 
-### 🧩 UI Components (shadcn/ui)
-- **Layout**: Card, Separator, Aspect Ratio, Resizable Panels
-- **Forms**: Input, Textarea, Select, Checkbox, Radio Group, Switch
-- **Feedback**: Alert, Toast (Sonner), Progress, Skeleton
-- **Navigation**: Breadcrumb, Menubar, Navigation Menu, Pagination
-- **Overlay**: Dialog, Sheet, Popover, Tooltip, Hover Card
-- **Data Display**: Badge, Avatar, Calendar
+## Contact Information
 
-### 📊 Advanced Data Features
-- **Tables**: Powerful data tables with sorting, filtering, pagination (TanStack Table)
-- **Charts**: Beautiful visualizations with Recharts
-- **Forms**: Type-safe forms with React Hook Form + Zod validation
+- **Phone**: (555) 123-4567
+- **Email**: info@pcmedicalsolutions.com
+- **Address**: 123 Medical Center Drive, Suite 100, Healthcare City, HC 12345
+- **Hours**: Monday - Friday: 8:00 AM - 6:00 PM, Saturday: 9:00 AM - 2:00 PM
 
-### 🎨 Interactive Features
-- **Animations**: Smooth micro-interactions with Framer Motion
-- **Drag & Drop**: Modern drag-and-drop functionality with DND Kit
-- **Theme Switching**: Built-in dark/light mode support
+## License
 
-### 🔐 Backend Integration
-- **Authentication**: Ready-to-use auth flows with NextAuth.js
-- **Database**: Type-safe database operations with Prisma
-- **API Client**: HTTP requests with Axios + TanStack Query
-- **State Management**: Simple and scalable with Zustand
-
-### 🌍 Production Features
-- **Internationalization**: Multi-language support with Next Intl
-- **Image Optimization**: Automatic image processing with Sharp
-- **Type Safety**: End-to-end TypeScript with Zod validation
-- **Essential Hooks**: 100+ useful React hooks with ReactUse for common patterns
-
-## 🤝 Get Started with Z.ai
-
-1. **Clone this scaffold** to jumpstart your project
-2. **Visit [chat.z.ai](https://chat.z.ai)** to access your AI coding assistant
-3. **Start building** with intelligent code generation and assistance
-4. **Deploy with confidence** using the production-ready setup
+© 2024 PC Medical Solutions. All rights reserved.
 
 ---
 
-Built with ❤️ for the developer community. Supercharged by [Z.ai](https://chat.z.ai) 🚀
+Built with modern web technologies to serve our patients better.
