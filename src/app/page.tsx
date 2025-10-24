@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Phone, Mail, MapPin, Clock, Heart, Shield, Activity, Users, ChevronRight, Menu, X } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, Heart, Shield, Activity, Users, ChevronRight, Menu, X, PlayCircle } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 export default function Home() {
@@ -43,11 +43,39 @@ export default function Home() {
 
   const benefits = [
     "Faster recovery times",
-    "Reduced pain and swelling", 
+    "Reduced pain and swelling",
     "Physician-trusted solutions",
     "Home-based treatment options",
     "Professional medical equipment",
     "Personalized care plans"
+  ]
+
+  const videos = [
+    {
+      title: "Shoulder Wrap",
+      description: "Applying the shoulder wrap for optimal results.",
+      videoUrl: "https://player.vimeo.com/video/277528107?badge=0&autopause=0&player_id=0&app_id=58479"
+    },
+    {
+      title: "Knee Wrap",
+      description: "Applying the knee wrap for optimal results.",
+      videoUrl: "https://player.vimeo.com/video/277527438?badge=0&autopause=0&player_id=0&app_id=58479"
+    },
+    {
+      title: "Unpack Unit",
+      description: "Unpacking the unit and its components.",
+      videoUrl: "https://player.vimeo.com/video/277528231?badge=0&autopause=0&player_id=0&app_id=58479"
+    },
+    {
+      title: "Hip Wrap",
+      description: "How to apply the hip wrap for effective cold therapy.",
+      videoUrl: "https://player.vimeo.com/video/277527008?badge=0&autopause=0&player_id=0&app_id=58479"
+    },
+    {
+      title: "Ankle Wrap",
+      description: "How to use the ankle wrap for effective cold therapy.",
+      videoUrl: "https://player.vimeo.com/video/277526870?badge=0&autopause=0&player_id=0&app_id=58479"
+    }
   ]
 
   return (
@@ -70,6 +98,7 @@ export default function Home() {
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
                 <a href="#home" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Home</a>
+                <a href="#videos" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Videos</a>
                 <a href="#services" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Services</a>
                 <a href="#about" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
                 <a href="#contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
@@ -94,6 +123,7 @@ export default function Home() {
           <div className="md:hidden bg-white border-t">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <a href="#home" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600">Home</a>
+              <a href="#videos" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600">Videos</a>
               <a href="#services" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600">Services</a>
               <a href="#about" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600">About</a>
               <a href="#contact" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600">Contact</a>
@@ -164,6 +194,78 @@ export default function Home() {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Video Section */}
+      <section id="videos" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
+              Product Training Videos
+            </h2>
+            <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+              Learn how to properly use our cold therapy equipment with these step-by-step instructional videos.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {videos.map((video, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={index === videos.length - 2 || index === videos.length - 1 ? "lg:col-span-1" : ""}
+              >
+                <Card className="h-full hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                  <CardHeader className="p-0">
+                    <div className="relative aspect-video bg-gray-100">
+                      <iframe
+                        src={video.videoUrl}
+                        className="absolute inset-0 w-full h-full"
+                        frameBorder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowFullScreen
+                        title={video.title}
+                      ></iframe>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-3">
+                      <PlayCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
+                      <div>
+                        <CardTitle className="text-lg font-semibold text-gray-900 mb-2">
+                          {video.title}
+                        </CardTitle>
+                        <CardDescription className="text-gray-600">
+                          {video.description}
+                        </CardDescription>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Center the last two videos on larger screens */}
+          <style jsx>{`
+            @media (min-width: 1024px) {
+              .grid > *:nth-last-child(2),
+              .grid > *:nth-last-child(1) {
+                margin-left: auto;
+                margin-right: auto;
+              }
+            }
+          `}</style>
         </div>
       </section>
 
