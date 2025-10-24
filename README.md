@@ -96,7 +96,7 @@ public/
 
 ## License
 
-© 2024 PC Medical Solutions. All rights reserved.
+© 2025 PC Medical Solutions. All rights reserved.
 
 ---
 
